@@ -1,0 +1,15 @@
+<apex:page sidebar="false" standardController="Account">
+    <apex:form >
+        <apex:pageBlock title="Account Details">
+            <apex:pageBlockSection columns="2" title="Basic Information" collapsible="true">
+                <apex:outputField value="{!Account.Name}"/>
+                <apex:outputField value="{!Account.Active__c}"/>
+                <apex:outputField value="{!Account.Type}"/>
+            </apex:pageBlockSection>
+            <apex:pageBlockButtons >
+                <apex:commandButton value="Edit" action="{!edit}"/>
+                <apex:commandButton value="Cancel" action="{!cancel}"/>
+            </apex:pageBlockButtons>      
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>
