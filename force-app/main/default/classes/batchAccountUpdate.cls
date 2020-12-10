@@ -9,7 +9,7 @@ global class batchAccountUpdate implements Database.Batchable<sobject> {
     global void execute(Database.BatchableContext BC, List<Account>scope){ //The scope contains list of first batch of 200 records queries in start method//
         //Here the scope size is 200 records. Max batch size by default. We can change that to any number say 20 for ex.//
         for(Account a: scope){
-            a.Name = a.Name+'batchUpdate';
+            //a.Name = a.Name+'batchUpdate';
         }
         update scope;
     }
